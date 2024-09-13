@@ -1,2 +1,2 @@
 # arduino
-my experiments on a arduino
+my experiments on an arduino
