@@ -1,5 +1,7 @@
 #include <Arduino.h>
-
+/*
+No board set up needed
+*/
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);// LED_BUILTIN is a function that refers to pin 13
