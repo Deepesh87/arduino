@@ -7,6 +7,8 @@
 plug middle of potentiometr to analog pin A0.
 Plus the other pins to Ground and 5V
 based on the code the Serial monitor/plot will print the voltage it reads on A0
+the numbers printed are in 10 bits binary
+so in decimal it would be 0 to 5V and in binary 0 to 1023
 
 */
 
