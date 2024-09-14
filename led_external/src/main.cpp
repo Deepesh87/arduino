@@ -11,7 +11,7 @@ to the positive end and negative to ground
 
  void loop(){
   digitalWrite(ledPin, HIGH);
-  delay(2000);
+  delay(1000);
   digitalWrite(ledPin, LOW);
-  delay(2000);
+  delay(1000);
  }
