@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 // use a potentiometer to vary the resistance and see the VOltages
-// the the diagram of the set up
+// See the diagram of the set up
 // learn about the functioning of a potentiometer
 /*
 plug middle of potentiometr to analog pin A0.
