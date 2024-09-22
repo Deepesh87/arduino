@@ -30,7 +30,8 @@ else{
 
 
 /*
-we use a pull down resistr here with the button .
+we use a pull down resistr here with the button . (Negative is connected to resistor)
+See https://youtu.be/AgQW81zzR18?si=DmK0A75XFu2ttHsZ
 when button is not pressed, the entire 5V that it is reading should go to the Ground,
 So, we should connect the button to also GROUND.  
 https://youtu.be/yBgMJssXqHY?si=W9xHePXHBlov84TN
