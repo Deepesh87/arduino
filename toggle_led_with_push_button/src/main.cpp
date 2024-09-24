@@ -15,6 +15,7 @@ int led_state=0;
 
 void setup() {
   // put your setup code here, to run once:
+  Serial.begin(9600);
   pinMode(pushButtonPIn, INPUT);
   pinMode(pin_led, OUTPUT);
 }
@@ -35,4 +36,8 @@ oldButtonState= currentButtonState;
 delay(100);
 }
 
-
+/* ==========detailed explanation here===========
+1) currentButtonState or the input always gives 0. As soon as the pin is pressed it becomes 1 and goes in the If condition
+2) in the IF Condition it does its stuff and as as soon as it comes out 
+3) currentButtonState becomes 0 since the PIN is not still pressed, so oldButtonState will always read 0
+*/

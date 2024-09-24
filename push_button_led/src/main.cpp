@@ -19,7 +19,6 @@ void setup() {
 
 void loop() {
 int buttonState= digitalRead(pushButtonPIn);
-// buttonState= 1- buttonState; to do opposite
 if (buttonState==HIGH){
 digitalWrite(pin_led, HIGH);
 }
