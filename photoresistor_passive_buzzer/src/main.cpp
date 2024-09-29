@@ -18,7 +18,7 @@ Serial.begin(9600);
 
 void loop() {
 light_value= analogRead(light_sensor_pin);
-Serial.println(light_value);
+// Serial.println(light_value);
 if (light_value<100){
 tone(buzzPin, 440);
 delay(800);
