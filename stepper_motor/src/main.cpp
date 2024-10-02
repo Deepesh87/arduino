@@ -16,5 +16,6 @@ myStepper.step(stepsPerRevolution);
 delay(dt);
 myStepper.step(-stepsPerRevolution);
 delay(dt);
+Serial.println("hello");
 }
 
