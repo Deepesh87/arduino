@@ -17,7 +17,7 @@ dht.begin();
 
 void loop() {
  humidity = dht.readHumidity();
- temp = dht.readHumidity();
+ temp = dht.readTemperature();
  Serial.print("Humidity = ");
  Serial.print(humidity);
  Serial.print(" ");
