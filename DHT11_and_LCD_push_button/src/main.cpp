@@ -32,15 +32,15 @@ void loop() {
  if (buttonState==0 and previousbuttonState==0){// when lcd is off, turn it on
  lcd.backlight();
  previousbuttonState = 1;
- temp = dht.readTemperature();
- humidity = dht.readHumidity();
- lcd.setCursor(0,0);
- lcd.print("Temp C: ");
+ temp = dht.readTemperature(); // this has a problem, the lcd wont update while in this loop.
+ humidity = dht.readHumidity(); // when we come back to it by tunring off and on again
+ lcd.setCursor(0,0);            // then it works well.
+ lcd.print("Temp C: ");         // fix it later.
  lcd.print(temp);
  lcd.setCursor(0,1);
  lcd.print("Humidity: ");
  lcd.print(humidity);
- delay(1000);
+ delay(100);
  }
  else if (buttonState==0 and previousbuttonState==1){ // if it was previously on, turn it off
   previousbuttonState = 0;
