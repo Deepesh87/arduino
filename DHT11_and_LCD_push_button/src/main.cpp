@@ -3,6 +3,9 @@
 #include <Adafruit_Sensor.h> // dht has dependency on this
 #include <LiquidCrystal_I2C.h>
 
+/*
+when clicked, turn on and then when clicked turn off.
+*/
 
 // leftmost-- VCC, then Sensor pin, pin 3 not used, pin 4 is GND
 const int sensorPin= 7; 
