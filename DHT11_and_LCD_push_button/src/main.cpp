@@ -4,7 +4,8 @@
 #include <LiquidCrystal_I2C.h>
 
 /*
-when clicked, turn on and then when clicked turn off.
+when clicked, turn on and then when clicked turn off. set up,
+same as LCD and push button with a step down resistor 3kOhm
 */
 
 // leftmost-- VCC, then Sensor pin, pin 3 not used, pin 4 is GND
