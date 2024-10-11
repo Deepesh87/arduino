@@ -57,3 +57,7 @@ else if (buttonState==0 and prev_buttonState==1){
   lcd.noBacklight();
 }
 }
+/*
+the baove does not give the live distance but only the distance each time the button is pressed.
+thats becoz once it enters the loop it checks the distance only once.
+*/
