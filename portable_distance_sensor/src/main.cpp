@@ -35,6 +35,7 @@ travelTime= pulseIn(echo_pin, HIGH); // gives the time in micro seconds
 dist_in_cms= 0.017*travelTime; // calculated using distance= speed * time
 lcd.setCursor(0,0);
 lcd.print("Distance in cms: ");
+lcd.setCursor(0,1);
 lcd.print(dist_in_cms);
 delay(1000);
 lcd.clear();
