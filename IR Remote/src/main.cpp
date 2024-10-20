@@ -1,26 +1,25 @@
 #include <Arduino.h>
 #include <IRremote.h>
 /*
-program to view the HEX code for all buttons on a IR remote
-
+program to map the HEX code for all buttons on a IR remote
+using the latest version of library. so these functions may not be on most youtube videos
 */
 
 const int ir_pin=9;
-IRrecv IR(ir_pin); // create an IR object and give the pin number
-decode_results cmd; // command from library to read the results from the remote and save in a variable
+String mycom;
 
 void setup() {
 Serial.begin(9600);
-IR.enableIRIn();
-IR.blink13(true);
+IrReceiver.begin(ir_pin, false); // IrReceiver is the object that the library gives. 
 }
 
 void loop() {
-  while(IR.decode(&cmd)==0){   //call the value stored at this variable cmd using &
-}
-Serial.println(cmd.value, HEX);
+if (IrReceiver.decode()){   // this is true only when a data is received
+mycom = String(IrReceiver.decodedIRData.decodedRawData, HEX);
+Serial.println(mycom);
 delay(1500);
-IR.resume();
+IrReceiver.resume();
+}
 }
 
 
