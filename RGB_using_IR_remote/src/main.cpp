@@ -85,7 +85,7 @@ default:
 }
 
 glow_rgb(red_state, green_state, blue_state);
-delay(1500);
+delay(1000);
 
 Serial.println(red_state);
 Serial.println(green_state);
