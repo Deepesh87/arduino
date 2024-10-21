@@ -20,7 +20,7 @@ IrReceiver.begin(ir_pin, false); // IrReceiver is the object that the library gi
 void loop() {
 if (IrReceiver.decode()){   // this is true only when a data is received
 mycom = String(IrReceiver.decodedIRData.decodedRawData, HEX);
-switch(IrReceiver.decodedIRData.decodedRawData)  // switch can only take non int, so directly using the raw output
+switch(IrReceiver.decodedIRData.decodedRawData)  // switch can only take non String, so directly using the raw output
 {
 case 0xba45ff00:
     Serial.println("Pressed 1");
