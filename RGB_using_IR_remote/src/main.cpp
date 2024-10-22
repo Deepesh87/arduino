@@ -17,6 +17,9 @@ int glow_rgb(int x, int y, int z);
 int red_state=0;
 int green_state=0;
 int blue_state=0;
+// int brightness_red=255;
+// int brightness_green=255;
+// int brightness_blue=255;
 int brightness=255; 
 
 void setup() {
@@ -50,38 +53,62 @@ case 0xb847ff00:
     green_state=0;
     blue_state=brightness;
     break;
+case 0xbb44ff00: // white
+    Serial.println("Pressed 4");
+    red_state=brightness;
+    green_state=brightness;
+    blue_state=brightness;
+    break;
+case 0xbf40ff00: //R+G
+    Serial.println("Pressed 5");
+    red_state=brightness;
+    green_state=brightness;
+    blue_state=0;
+    break;
+case 0xbc43ff00: // R+B
+    Serial.println("Pressed 6");
+    red_state=brightness;
+    green_state=0;
+    blue_state=brightness;
+    break;
+case 0xf807ff00: // G+B
+    Serial.println("Pressed 7");
+    red_state=0;
+    green_state=brightness;
+    blue_state=brightness;
+    break;
 case 0xe718ff00:
     Serial.println("Pressed UP");
-    if((red_state<255) & (red_state>0)){
+    if((brightness<255) & (brightness>0)){
     brightness = min(brightness +100,255); 
-    red_state= brightness;
+    }
+    if((red_state<255) & (red_state>0)){
+    red_state = brightness; 
     }
     if((green_state<255) & (green_state>0)){
-    brightness = min(brightness +100,255); 
-    green_state= brightness;
+    green_state = brightness; 
     }
     if((blue_state<255) & (blue_state>0)){
-    brightness = min(brightness +100,255); 
-    blue_state= brightness;
+    blue_state = brightness; 
     }
     break;
 case 0xad52ff00:
     Serial.println("Pressed DOWN");
-    if(red_state>0){
+    if(brightness>0){
     brightness = max(brightness -100, 1); 
-    red_state= brightness;
+    }
+    if(red_state>0){
+    red_state = brightness; 
     }
     if(green_state>0){
-    brightness = max(brightness -100, 1); 
-    green_state= brightness;
+    green_state = brightness; 
     }
     if(blue_state>0){
-    brightness = max(brightness -100, 1);  
-    blue_state= brightness;
+    blue_state = brightness; 
     }
     break; 
 default:
-    Serial.println("Not sure what key did you press?");
+    Serial.println("Not sure of the key you pressed!");
 }
 
 glow_rgb(red_state, green_state, blue_state);
@@ -100,3 +127,5 @@ int glow_rgb(int red, int green, int blue){
   analogWrite(PinB,blue); 
   return 0;
 }
+
+
