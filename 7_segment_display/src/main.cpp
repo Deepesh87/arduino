@@ -3,6 +3,7 @@
 /*
 countdown timer on a single digit 7 segment display.
 for information on how to connect the PINS, refer the image attached here
+Use 220 to 330 Ohn resistor for each segment.
 */
 SevSeg sevseg;//create object
 byte num_digits = 1; // num of digits in display
