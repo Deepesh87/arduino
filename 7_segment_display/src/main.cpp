@@ -9,10 +9,10 @@ SevSeg sevseg;//create object
 byte num_digits = 1; // num of digits in display
 byte digit_pins[] = {};// not used with single digit display
 byte segment_pins[] = {6,5,2,3,4,7,8,9}; // in order of A,B,C,D,E,F,G, decimal
-bool resistors_used = true;
+bool resistors_on_segments = true;
 byte hardware_config = COMMON_CATHODE;
 void setup() {
-sevseg.begin(hardware_config, num_digits, digit_pins, segment_pins, resistors_used);
+sevseg.begin(hardware_config, num_digits, digit_pins, segment_pins, resistors_on_segments);
 sevseg.setBrightness(90);
 }
 void loop() {
