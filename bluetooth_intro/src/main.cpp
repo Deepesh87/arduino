@@ -5,6 +5,10 @@ get started controlling using a bluetooth. in this example we will
 light an LED, using commands from a bleutooth device.
 In the code, if we type H in the Serial command, it should lighten up the bulb.
 use the app Arduino Bluetooth App on Android.
+
+Connect VCC, GNd to 5V and grn,
+RX and TX of HC06/bluetooth to TX and RX respectively.
+note: RX to TX and TX to RX.(reversed)
 */
 
 char val; // variable to receive data from bluetooth connection
