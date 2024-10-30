@@ -64,7 +64,7 @@ void back()
   motor4.run(BACKWARD); //rotate the motor anti-clockwise
 }
 
-void left()
+void right()
 {
   motor1.setSpeed(255); //Define maximum velocity
   motor1.run(BACKWARD); //rotate the motor anti-clockwise
@@ -76,7 +76,7 @@ void left()
   motor4.run(FORWARD);  //rotate the motor clockwise
 }
 
-void right()
+void left()
 {
   motor1.setSpeed(255); //Define maximum velocity
   motor1.run(FORWARD);  //rotate the motor clockwise
