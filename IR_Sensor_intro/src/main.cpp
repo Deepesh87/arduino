@@ -18,7 +18,7 @@ void loop() {
 pin_status = digitalRead(out_pin);
 // got to know this through experimentation. ACTIVE LOW IR SENSOR
 if (pin_status== HIGH){
-Serial.println("No Object is detected.");
+Serial.println("No Object");
 }
 else{
   Serial.println("An object is detected");
