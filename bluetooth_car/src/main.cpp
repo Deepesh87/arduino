@@ -14,10 +14,10 @@ RX will be to outermost and inner side.
 SoftwareSerial bluetoothSerial(9, 10); // RX, TX
 
 // initial motors pin
-AF_DCMotor motor1(1, MOTOR12_1KHZ);
-AF_DCMotor motor2(2, MOTOR12_1KHZ);
-AF_DCMotor motor3(3, MOTOR34_1KHZ);
-AF_DCMotor motor4(4, MOTOR34_1KHZ);
+AF_DCMotor motor1(1, MOTOR12_1KHZ); // for my connection this is front RHS
+AF_DCMotor motor2(2, MOTOR12_1KHZ); // for my connection this is rear RHS
+AF_DCMotor motor3(3, MOTOR34_1KHZ); // for my connection this is rear LHS
+AF_DCMotor motor4(4, MOTOR34_1KHZ); // for my connection this is front LHS
 
 char command;
 
