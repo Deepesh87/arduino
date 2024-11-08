@@ -5,7 +5,7 @@ See circuit diagram in image.
 photoresistr requires 5k Ohm resistor
 
 */
-const int lightPin=A0;
+const int lightPin=A0; //read pin for photoresistor
 const int redLight_pin=2;
 const int greenLight_pin=7;
 float lightValue=0;

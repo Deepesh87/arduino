@@ -1,30 +1,37 @@
 #include <Arduino.h>
+#include <Servo.h>
+/*
+Turn servo 0 degree if photoresistor reads <450
+otherwise turn 180
+photoresistr requires 5k Ohm resistor.
+Connect servo to separate power.
 
-const int lightPin=A0;
-const int redLight_pin=2;
-const int greenLight_pin=7;
-int lightValue=0;
+*/
 
-void setup() {
-  // put your setup code here, to run once:
-pinMode(lightPin, INPUT);
-pinMode(redLight_pin, OUTPUT);
-pinMode(greenLight_pin, OUTPUT);
-Serial.begin(9600);
+int pos;
+int ServoPin=9;
+Servo myServo;
+const int lightPin=A0; //read pin for photoresistor
+float lightValue=0;
+
+void setup()
+{
+  pinMode(lightPin, INPUT);
+  Serial.begin(9600);
+  myServo.attach(ServoPin);
 }
 
-void loop() {
+void loop()
+{
 lightValue=analogRead(lightPin);
 Serial.println(lightValue);
-delay(3000);
-if (lightValue<500){
-  digitalWrite(greenLight_pin,LOW); 
-  digitalWrite(redLight_pin,HIGH);
+
+if (lightValue<450){
+pos= 0;
 }
 else{
-  digitalWrite(redLight_pin,LOW);
-  digitalWrite(greenLight_pin,HIGH); 
+pos= 180;
 }
-
-delay(100);
+myServo.write(pos);
+delay(1000);
 }
