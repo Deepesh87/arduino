@@ -16,5 +16,15 @@ Serial.begin(9600);
 void loop() {
 lightValue=analogRead(lightPin);
 Serial.println(lightValue);
+delay(3000);
+if (lightValue<500){
+  digitalWrite(greenLight_pin,LOW); 
+  digitalWrite(redLight_pin,HIGH);
+}
+else{
+  digitalWrite(redLight_pin,LOW);
+  digitalWrite(greenLight_pin,HIGH); 
+}
 
+delay(100);
 }

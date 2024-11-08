@@ -1,5 +1,10 @@
 #include <Arduino.h>
+/*
+red led glows if reading on photoresistor is <500 otherwise Green glows.
+See circuit diagram in image.
+photoresistr requires 5k Ohm resistor
 
+*/
 const int lightPin=A0;
 const int redLight_pin=2;
 const int greenLight_pin=7;

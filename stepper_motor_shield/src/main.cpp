@@ -2,7 +2,7 @@
 #include <AFMotor.h>
 
 /*
-do not install v2 library
+do not install AFMotorv2 library
 connect stepper motor to either m1 & 2 (port1)
 or M2 & M3(port2)
 NOTE: If powering the shield separately make sure to use the jumper cautiously.
