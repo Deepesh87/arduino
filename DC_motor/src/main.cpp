@@ -1,24 +1,36 @@
 #include <Arduino.h>
-#include <AFMotor.h>
 
 /*
-do not install v2 library
+TESTING DC motor on arduino..
 connect motors in any of the motor terminals in the Shield.(i did to M1)
-NOTE: If powering the shield separately make sure to use the jumper cautiously.
+NOTE: If powering the shield separately (a MUST ) make sure to use the jumper cautiously.
+pls study the images attached
 */
+// define pins
+int motor_speed= 10; // INA to control speed of M1, must be PWM
+int motor_polarity1= 9;
+int motor_polarity2= 8;
 
-AF_DCMotor motor(1); //we connect to M1 on the shield
 
 void setup() {
+pinMode(motor_speed,OUTPUT);
+pinMode(motor_polarity1,OUTPUT);
+pinMode(motor_polarity2,OUTPUT);
 }
 
 void loop() {
-motor.setSpeed(200);
-motor.run(FORWARD);
-delay(8000);
-motor.run(RELEASE);
-delay(8000);
-motor.run(BACKWARD);
-delay(8000);
-
+//set the speeed
+analogWrite(motor_speed, 200); // range 0 -255
+//run in one direction for 5 sec
+digitalWrite(motor_polarity1, HIGH);
+digitalWrite(motor_polarity2, LOW);
+delay(5000);
+//now stop for 10 sec
+digitalWrite(motor_polarity1, LOW);
+digitalWrite(motor_polarity2, LOW);
+delay(10000);
+// now run in reverse direction for 5sec
+digitalWrite(motor_polarity1, LOW);
+digitalWrite(motor_polarity2, HIGH);
+delay(5000);
 }
