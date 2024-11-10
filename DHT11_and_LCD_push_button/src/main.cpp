@@ -4,6 +4,7 @@
 #include <LiquidCrystal_I2C.h>
 
 /*
+Read the DHT11_and_LCD project for more details.
 when clicked, turn on and then when clicked turn off. set up,
 same as LCD and push button with a step down resistor 3kOhm
 */

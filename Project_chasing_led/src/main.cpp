@@ -1,4 +1,8 @@
 #include <Arduino.h>
+
+/*
+bulid chasing LEDS, use connection as per the variables defined....
+*/
 const int pin1=2;
 const int pin2=3;
 const int pin3=4;

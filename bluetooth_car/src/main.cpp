@@ -8,7 +8,7 @@ Power both motor shield and arduino with 9V battery (NOte: do remove the jack el
 Connect bluetooth 4 wires to motor shield
 TXD will connect to S,
 RX will be to outermost and inner side.
-
+use the app Arduino Bluetooth App on Android.
 */
 
 SoftwareSerial bluetoothSerial(9, 10); // RX, TX

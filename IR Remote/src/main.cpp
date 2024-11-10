@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <IRremote.h>
 /*
-program to map the HEX code for all buttons on a IR remote
+program to map/see on Serial monitor, the HEX code for all buttons on a IR remote
 using the latest version of library. so these functions may not be on most youtube videos
 IR sensor connection- when S is written on the right..
 left to GND,

@@ -1,6 +1,7 @@
 #include <Arduino.h>
 
 /*
+Print distance on Serial monitor using the Ultra Sonic Sensor.
 connect trigger pin to 12, echo pin to 11,
 vcc to 5v of arduino and grn to grn of arduino
 */

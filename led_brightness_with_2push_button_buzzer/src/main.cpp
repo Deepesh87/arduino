@@ -1,6 +1,10 @@
-// C++ code
-//
 #include <Arduino.h>
+/*
+2 push buttons one to increase brightness other to decrease. 
+both in steps of say (50).
+when min brightness i.e. 0 is reached or max brightness i.e. 255 is reached,
+sound the buzzer, so user stops pressing.
+*/
 const int pin_read_increase= 7;
 const int pin_read_decrease= 2;
 const int led_pin=9;

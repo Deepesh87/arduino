@@ -1,6 +1,5 @@
 #include <Arduino.h>
 
-
 const int PinR= 3;
 const int PinG= 5;
 const int PinB= 6;

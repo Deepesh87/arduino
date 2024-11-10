@@ -1,12 +1,15 @@
 #include <Arduino.h>
 #include <LiquidCrystal.h>
 
-/*vss goes to ground,
+/*
+Learn to use the 16*2 library without any I2C module
+
+vss goes to ground,
 vdd-5v,
 v0 - middleof potentiometer,
 rs- pin 7
 rw-gnd,
-E - 8,
+E - 8, rest as defined in the pin variables.
 */
 
 int rs=7;

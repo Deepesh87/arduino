@@ -2,6 +2,7 @@
 #include <LiquidCrystal_I2C.h>
 
 /*
+Check the distance using ultra sonic sensor...when the push button is pressed. 
 ======= for LCD=========================
 only the 4 pins need to be connected.
 GND to gnd
@@ -58,6 +59,6 @@ else if (buttonState==0 and prev_buttonState==1){
 }
 }
 /*
-the baove does not give the live distance but only the distance each time the button is pressed.
+the above does not give the live distance but only the distance each time the button is pressed.
 thats becoz once it enters the loop it checks the distance only once.
 */

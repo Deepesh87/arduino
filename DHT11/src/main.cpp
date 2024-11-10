@@ -1,7 +1,13 @@
 #include <Arduino.h>
 #include <DHT.h>
 #include <Adafruit_Sensor.h> // dht has dependency on this
+
+
+/*
+get started with the DHT11 temp & humidity sensor
 // leftmost-- VCC, then Sensor pin, pin 3 not used, pin 4 is GND
+*/
+
 const int sensorPin= 7; 
 #define Type DHT11 //  to define the DHT sensor type you’re using
 float temp;

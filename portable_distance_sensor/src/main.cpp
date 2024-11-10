@@ -2,7 +2,8 @@
 #include <LiquidCrystal_I2C.h>
 
 /*
-======= for LCD=========================
+Display distance using an Ultra Sonic sensor on an LCD...
+======= for LCD, using the I2C module
 only the 4 pins need to be connected.
 GND to gnd
 VCC to 5V,

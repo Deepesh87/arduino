@@ -1,4 +1,11 @@
 #include <Arduino.h>
+
+/*
+glow 4 leds indicating a binary counter.
+e.g. first is 0, then 4th glows, then 3rd glows, then 3rd and 4th both, etc
+for connection see image.
+
+*/
 const int pinA=2;
 const int pinB=3;
 const int pinC=4;

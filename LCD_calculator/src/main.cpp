@@ -6,6 +6,7 @@
 // 2 numbers and the operation
 
 /*
+With the I2C module in LCD, we need just 4 pins
 only the 4 pins need to be connected.
 GND to gnd
 VCC to 5V,

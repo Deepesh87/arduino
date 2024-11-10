@@ -4,7 +4,7 @@
 #include <SPI.h>
 
 /*
-make sure to fllow the image shown. Connect the pins as mentioned in variable declaration
+make sure to follow the image shown. Connect the pins as mentioned in variable declaration
 VCC to pwoer/5V and gnd to gnd.
 No resistors needed
 

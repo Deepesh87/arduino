@@ -1,5 +1,5 @@
 #include <Arduino.h>
-// play random sounds that change
+// play random sounds that change with a passive buzzer.
 
 int buzzPin= 8;
 int passive_buzz_tune(int buzzPin);
