@@ -1,2 +1,2 @@
 # arduino
-my experiments on an arduino. yes, M a late bloomer.
+my experiments on an arduino. yes, I am a late bloomer.
