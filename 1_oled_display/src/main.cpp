@@ -1,6 +1,6 @@
 
 /*********
-  Complete project details at https://randomnerdtutorials.com
+  Complete project details at https://randomnerdtutorials.com/guide-for-oled-display-with-arduino/
 connect GND to GND, VDD to 5V, SCK to A5, SDA to A4
 i have 0.96Inch 128x64 OLED screen
 *********/
@@ -19,6 +19,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 // declare all user defined functions. Only needed in Platform IO, not essential in Arduino IDE
 
+// an image in bitmap format
 static const unsigned char PROGMEM logo_bmp[] =
 { B00000000, B11000000,
   B00000001, B11000000,
@@ -37,6 +38,7 @@ static const unsigned char PROGMEM logo_bmp[] =
   B01110000, B01110000,
   B00000000, B00110000 };
 
+
 void setup() {
   Serial.begin(115200);
 
@@ -49,7 +51,7 @@ void setup() {
   // the library initializes this with an Adafruit splash screen. This is the buffer content meaning the Adafruit logo is displayed on the screen.
   // the logo is installed in the library, you can change it to your own logo
   display.display();
-  delay(5000); // Pause for 2 seconds
+  delay(2000); // Pause for 2 seconds
 
   // Clear the buffer
   display.clearDisplay();
@@ -57,19 +59,21 @@ void setup() {
   // Draw a single pixel in white
   display.drawPixel(64, 32, WHITE);// 64 is column# and 32 is row# of the pixel
   display.display();
-  delay(5000); // Pause for 2 seconds
+  delay(2000); // Pause for 2 seconds
   display.clearDisplay();
-  display.drawBitmap(64, 32, logo_bmp, 16,16, WHITE);// 64 is column# and 32 is row# of the pixel, 16 is width and 16 is height of the bitmap
 
-
-  // Show the display buffer on the screen. You MUST call display() after
-  // drawing commands to make them visible on screen!
+// 64 is column# and 32 is row# where the image will be shown, 16 is width and 16 is height of the bitmap
+  display.drawBitmap(64, 32, logo_bmp, 16,16, WHITE);
   display.display();
-  delay(10000);
-  // display.display() is NOT necessary after every single drawing command,
-  // unless that's what you want...rather, you can batch up a bunch of
-  // drawing operations and then update the screen all at once by calling
-  // display.display(). These examples demonstrate both approaches...
+  delay(2000); // Pause for 2 seconds
+  display.clearDisplay();
+
+  display.setTextSize(2); // can take 1 to 8
+  display.setTextColor(WHITE);
+  display.setCursor(0, 10);
+  // Display static text
+  display.println("Welcome to Xperio   Learning");
+  display.display(); 
 }
 
 void loop() {
