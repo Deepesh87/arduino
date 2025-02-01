@@ -31,7 +31,7 @@ void setup() {
 void loop() {
   // read the state of the push button
   pushButtonState = digitalRead(buttonPin);
-  delay(500);
+  delay(200);
   // if the button is pressed, change the state of the leds
   if (pushButtonState == HIGH) {
     state++;
