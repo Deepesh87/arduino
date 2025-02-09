@@ -3,7 +3,7 @@
 #include <SoftwareSerial.h>
 
 
-// Speakers must be connected to R+-or l+-. Code only works when uploaded rom Arduino IDe.
+// Speakers must be connected to R+-or l+-. Code only works when uploaded from Arduino IDe.
 //more details on DF player here https://wiki.dfrobot.com/DFPlayer_PRO_SKU_DFR0768#:~:text=Default%20serial%20baud%20rate%3A%20115200
 SoftwareSerial DF1201SSerial(2, 3);  //connect VIN to 5V, gnd to gnd and RX to 3  TX to 2
  
