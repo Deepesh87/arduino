@@ -13,7 +13,7 @@ bool sensor_value = 0;
 
 void setup() {
   pinMode(led_pin, OUTPUT);
-  pinMode(sensor_pin, INPUT_PULLUP);
+  pinMode(sensor_pin, INPUT_PULLUP); // internal pull-up resistor
   Serial.begin(9600);
 }
 
