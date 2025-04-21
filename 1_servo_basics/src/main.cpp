@@ -26,7 +26,10 @@ while(Serial.available()==0){
   //keep waiting until a value is given by user
 }
 pos= Serial.parseInt();
+while (Serial.available() > 0) {
+Serial.read();  // flush buffer otherwise it take the enter we press as \n and takes 0 as value
+}
 Serial.println(pos);
-myServo.write(pos);
 delay(1000);
+myServo.write(pos);
 }
